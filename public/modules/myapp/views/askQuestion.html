@@ -1,0 +1,46 @@
+<!-- Ask Question Page Starts -->
+<section data-ng-controller="askQuestionController">
+            <div id="mainbar" class="ask-mainbar">
+                <div id="question-form">
+                    <div style="position: relative;"> 
+                        <div class="form-item ask-title">
+                            <table class="ask-title-table">
+                                <tbody><tr>
+                                    <td class="ask-title-cell-key">
+                                        <label for="title">Title</label>
+                                    </td>
+                                    <td class="ask-title-cell-value">
+                                        <input id="title" name="title" type="text" maxlength="300" tabindex="100" placeholder="What's your programming question? Be specific." class="ask-title-field" data-min-length="15" data-max-length="150" autocomplete="off">                        
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <div id="question-suggestions">
+                            </div>
+                        </div>
+                    </div>
+
+                    <textarea id="wmd-input" class="wmd-input processed" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+
+                    <div class="form-submit cbt">
+                        <input id="submit-button" type="submit" value="Post Your Question" tabindex="120" ng-click="postQuestion();">
+                        <a href="#" class="discard-question dno">discard</a>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <div id="sidebar" class="ask-sidebar">
+                <div id="scroller-anchor"></div>
+                <div id="scroller" style="position: relative; width: 270px;">
+                    <div class="module newuser sidebar-help" id="how-to-title">
+                        <h4>How to Ask</h4>
+                        <p><b>Is your question about programming?</b></p>
+                        <p>We prefer questions that can be <i>answered</i>, not just discussed.</p>
+                        <p>Provide details. Share your research.</p>                        
+                    </div>
+                </div>
+            </div>
+
+            <br class="cbt">
+<section>
+            <!-- Ask Question Page Ends -->

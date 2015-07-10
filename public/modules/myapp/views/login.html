@@ -1,0 +1,76 @@
+<div id="se-login" class="preferred-login" style="overflow: hidden; height: 162px; width: 300px;">
+    <!-- For Login-->
+    <form id="se-login-form" action="/users/login" method="POST">
+        <input type="hidden" name="fkey" value="cfa13f7b40bcce469323c2bcc145c9f0">
+        <div id="se-signup-legend">
+            <p>
+                <span class="icon stackexchange-signup" style="background-position: -38px 0"></span>
+                <span><strong>Log in using Ask Me Credentials</strong></span>
+            </p>
+        </div>  
+        <div class="form-bottom">
+            <div>
+                <input name="username" placeholder="Username" type="username" size="30" maxlength="100">
+            </div>
+            <div>
+                <input name="password" placeholder="Password" type="password" value="">
+            </div>
+            <!-- <div>
+                <input name="employeeId" placeholder="Employee ID" type="employeeId" value="">
+            </div>
+            <div>
+                <input name="role" placeholder="Role(PA,PAT,A,SA etc)" type="role" value="">
+            </div> -->
+
+            <div class="form-submit cbt">
+                <input id="submit-button" name="submit-button" type="button" value="Log In">
+                <a href="/users/account-recovery">forgot password</a>
+            </div>
+
+            <br>
+        </div>
+    </form>
+</div>
+    <!-- For Sign Up-->
+
+<div id="se-signup" class="preferred-login" style="overflow: hidden; height: 40px; width: 40px; margin-left: 350px;margin-top: -100px;">
+
+    <strong>OR</strong>
+
+</div>
+<br>
+
+<div id="se-signup" class="preferred-login" style="overflow: hidden; height: 280px; width: 300px; margin-left: 430px;margin-top: -150px;">
+    <form id="se-login-form" action="/users/login" method="POST">
+        <input type="hidden" name="fkey" value="cfa13f7b40bcce469323c2bcc145c9f0">
+        <div id="se-signup-legend">
+            <p>
+                <span class="icon stackexchange-signup" style="background-position: -38px 0"></span>
+                <span><strong>Sign Up By Providing Below Details</strong></span>
+            </p>
+        </div>
+        <div class="form-bottom">
+            <div>
+                <input name="employeeId" placeholder="Employee ID" type="employeeId" value="">
+            </div>
+            <div>
+                <input name="username" placeholder="Username" type="username" size="30" maxlength="100">
+            </div>
+            <div>
+                <input name="password" placeholder="Password" type="password" value="">
+            </div>
+            <div>
+                <input name="email" placeholder="Email Id" type="email" value="">
+            </div>            
+            <div>
+                <input name="role" placeholder="Role(PA,PAT,A,SA etc)" type="role" value="">
+            </div>
+
+            <div class="form-submit cbt">
+                <input id="submit-button" name="submit-button" type="button" value="Sign Up">
+            </div>
+
+            <br>
+        </div>
+    </form>
+</div>
