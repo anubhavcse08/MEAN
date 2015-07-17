@@ -44,7 +44,8 @@ module.exports = {
 		lib: {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+				'public/lib/bootstrap/dist/css/bootstrap-theme.css',	
+				'public/lib/toastr/toastr.css'
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -53,11 +54,13 @@ module.exports = {
 				'public/lib/angular-ui-router/angular-ui-router.js',
 				'public/lib/angular-ui-utils/modules/utils.js',
 				'public/lib/angular-ui-utils/modules/*/*.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/jquery/jquery.js',
+				'public/lib/toastr/toastr.js'
 			]
 		},
 		css: [
-			'public/modules/**/css/*.css'
+			'public/modules/**/css/*.css',
 		],
 		js: [
 			'public/config.js',

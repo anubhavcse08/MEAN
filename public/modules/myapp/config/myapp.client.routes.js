@@ -14,7 +14,7 @@ angular.module('myapp').config(['$stateProvider', '$urlRouterProvider',function(
         .state('index', {
             url: '/index',
             parent : 'base',
-            controller: 'loginController',
+            controller: 'authenticationController',
             views : {
                     'center@base' : {
                     templateUrl: 'modules/myapp/views/login.html'                    

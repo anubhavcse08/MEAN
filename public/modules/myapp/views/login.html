@@ -1,4 +1,5 @@
-<div id="se-login" class="preferred-login" style="overflow: hidden; height: 162px; width: 300px;">
+<section data-ng-controller="authenticationController">
+<div id="se-login" class="preferred-login" style="overflow: hidden; height: 185px; width: 300px;">
     <!-- For Login-->
     <form id="se-login-form" action="/users/login" method="POST">
         <input type="hidden" name="fkey" value="cfa13f7b40bcce469323c2bcc145c9f0">
@@ -10,20 +11,13 @@
         </div>  
         <div class="form-bottom">
             <div>
-                <input name="username" placeholder="Username" type="username" size="30" maxlength="100">
+                <input name="username" placeholder="Username" type="username" size="30" maxlength="100" ng-model="userDetails.credetials.userName">
             </div>
             <div>
-                <input name="password" placeholder="Password" type="password" value="">
-            </div>
-            <!-- <div>
-                <input name="employeeId" placeholder="Employee ID" type="employeeId" value="">
-            </div>
-            <div>
-                <input name="role" placeholder="Role(PA,PAT,A,SA etc)" type="role" value="">
-            </div> -->
-
+                <input name="password" placeholder="Password" type="password" value="" ng-model="userDetails.credetials.password">
+            </div>            
             <div class="form-submit cbt">
-                <input id="submit-button" name="submit-button" type="button" value="Log In">
+                <input id="submit-button" name="submit-button" type="button" value="Log In" ng-click="login()">
                 <a href="/users/account-recovery">forgot password</a>
             </div>
 
@@ -40,7 +34,7 @@
 </div>
 <br>
 
-<div id="se-signup" class="preferred-login" style="overflow: hidden; height: 280px; width: 300px; margin-left: 430px;margin-top: -150px;">
+<div id="se-signup" class="preferred-login" style="overflow: hidden; height: 280px; width: 300px; margin-left: 430px;margin-top: -175px;">
     <form id="se-login-form" action="/users/login" method="POST">
         <input type="hidden" name="fkey" value="cfa13f7b40bcce469323c2bcc145c9f0">
         <div id="se-signup-legend">
@@ -51,26 +45,27 @@
         </div>
         <div class="form-bottom">
             <div>
-                <input name="employeeId" placeholder="Employee ID" type="employeeId" value="">
+                <input name="employeeId" placeholder="Employee ID" type="employeeId" value="" ng-model="userDetails.employeeId">
             </div>
             <div>
-                <input name="username" placeholder="Username" type="username" size="30" maxlength="100">
+                <input name="username" placeholder="Username" type="username" size="30" maxlength="100" ng-model="userDetails.userName">
             </div>
             <div>
-                <input name="password" placeholder="Password" type="password" value="">
+                <input name="password" placeholder="Password" type="password" value="" ng-model="userDetails.password">
             </div>
             <div>
-                <input name="email" placeholder="Email Id" type="email" value="">
+                <input name="email" placeholder="Email Id" type="email" value="" ng-model="userDetails.email">
             </div>            
             <div>
-                <input name="role" placeholder="Role(PA,PAT,A,SA etc)" type="role" value="">
+                <input name="role" placeholder="Role(PA,PAT,A,SA etc)" type="role" value="" ng-model="userDetails.role">
             </div>
 
             <div class="form-submit cbt">
-                <input id="submit-button" name="submit-button" type="button" value="Sign Up">
+                <input id="submit-button" name="submit-button" type="button" value="Sign Up" ng-click="signup()">
             </div>
 
             <br>
         </div>
     </form>
 </div>
+</section>
