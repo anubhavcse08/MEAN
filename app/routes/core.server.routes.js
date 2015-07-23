@@ -9,4 +9,12 @@ module.exports = function(app) {
 	var users = require('../../app/controllers/myapp/myapp.authentication.server.controller'); 
 	app.route('/myapp/auth/signup').post(users.signup);
 	app.route('/myapp/auth/signin').post(users.signin);
+
+	var questionAndAnswer = require('../../app/controllers/myapp/myapp.QandA.server.controller');
+	app.route('/myapp/postQuestion').post(questionAndAnswer.postQuestion);
+	app.route('/myapp/getAllQuestions').post(questionAndAnswer.getAllQuestions);
+	app.route('/myapp/postAnswer').post(questionAndAnswer.postAnswer);
+	app.route('/myapp/getAnswers').post(questionAndAnswer.getAnswers);
+	app.route('/myapp/updateQuestion').post(questionAndAnswer.updateQuestion);
+	app.route('/myapp/updateAnswer').post(questionAndAnswer.updateAnswer);
 };

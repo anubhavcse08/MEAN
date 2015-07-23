@@ -4,6 +4,7 @@
 angular.module('myapp').controller('authenticationController', ['$scope','$http','$location','userDetailsService',function($scope,$http,$location,userDetailsService) {
 
 	console.log('loading authenticationController');
+	$(".mainnavs").hide();
 
 	$scope.userDetails = {};
 	$scope.userDetails.credetials = {};
@@ -40,6 +41,7 @@ angular.module('myapp').controller('authenticationController', ['$scope','$http'
 		$http.post('myapp/auth/signin', $scope.userDetails.credetials).success(function(response) {
 			$scope.userDetails = response;
 			userDetailsService.useruserDetail = response;
+			$(".mainnavs").show();
 			$location.path('/allQuestions');
 		}).error(function(response) {			
 			toastr.error(response.message);

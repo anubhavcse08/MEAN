@@ -10,7 +10,7 @@
                                         <label for="title">Title</label>
                                     </td>
                                     <td class="ask-title-cell-value">
-                                        <input id="title" name="title" type="text" maxlength="300" tabindex="100" placeholder="What's your programming question? Be specific." class="ask-title-field" data-min-length="15" data-max-length="150" autocomplete="off">                        
+                                        <input id="title" name="title" type="text" maxlength="300" tabindex="100" placeholder="What's your programming question? Be specific." class="ask-title-field" data-min-length="15" data-max-length="150" autocomplete="off" ng-model="question.title">                        
                                     </td>
                                 </tr>
                             </tbody></table>
@@ -19,7 +19,7 @@
                         </div>
                     </div>
 
-                    <textarea id="wmd-input" class="wmd-input processed" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+                    <textarea id="wmd-input" class="wmd-input processed" name="post-text" cols="92" rows="15" tabindex="101" data-min-length="" ng-model="question.content"></textarea>
 
                     <div class="form-submit cbt">
                         <input id="submit-button" type="submit" value="Post Your Question" tabindex="120" ng-click="postQuestion();">
