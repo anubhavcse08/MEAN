@@ -13,6 +13,7 @@ module.exports = function(app) {
 	var questionAndAnswer = require('../../app/controllers/myapp/myapp.QandA.server.controller');
 	app.route('/myapp/postQuestion').post(questionAndAnswer.postQuestion);
 	app.route('/myapp/getAllQuestions').post(questionAndAnswer.getAllQuestions);
+	app.route('/myapp/searhQuestions').post(questionAndAnswer.searhQuestions);
 	app.route('/myapp/postAnswer').post(questionAndAnswer.postAnswer);
 	app.route('/myapp/getAnswers').post(questionAndAnswer.getAnswers);
 	app.route('/myapp/updateQuestion').post(questionAndAnswer.updateQuestion);
