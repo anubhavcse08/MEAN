@@ -45,7 +45,6 @@ exports.signin = function(req, res) {
 	  	console.log('Error in signin');
 	  	return console.error(err);
 	  }else {
-	  	console.log(user);
 	  	if(user && req.body.userName==user.userName && req.body.password==user.password){
 	  		res.json(user);
 	  	}else {

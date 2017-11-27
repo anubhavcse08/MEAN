@@ -1,5 +1,5 @@
 <!--Questions Page Starts -->
-<section data-ng-controller="allQuestionsController" onload="getAllQuestions()">
+<section data-ng-controller="allQuestionsController" ng-init="getAllQuestions()">
 <div id="mainbar">
 	<div class="subheader">
     	<h1 id="h-all-questions">All Questions</h1>            
@@ -15,7 +15,7 @@
 	</div>
 	<div id="questions">
 		<!-- Iterate Questions from here -->
-		<div ng-repeat="quest in allQuestions | orderBy:predicate:reverse | startFrom:currentPage*maxSize | limitTo:maxSize">
+		<div ng-repeat="quest in allQuestions | filterBySearch:searchtext | orderBy:predicate:reverse | startFrom:currentPage*maxSize | limitTo:maxSize">
 			<div class="question-summary" id="question-summary-30621756">
 				<div class="statscontainer">
 					<div class="statsarrow"></div>
@@ -64,6 +64,7 @@
 </div>
 
 <div id="sidebar">
+	<input placeholder="Search here..." id="websiteSearch" type="text" style="  display: block;padding: 0 1.5714em 0 0.714em;line-height: 0.875em;fontsize: 0.875em;color: #8f8f8f;height: 31px;border:1px solid #e9e9e9;border-radius: 2px;-webkit-border-radius: 2px;margin: 5px 0 -10px 0;" ng-model="searchtext"><br>
 	<div class="module" id="questions-count">
         <div class="summarycount al">{{allQuestions.length}}</div>
         <p>questions</p>

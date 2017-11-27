@@ -55,6 +55,20 @@ exports.getAllQuestions = function(req, res) {
 	});
 };
 
+exports.searhQuestions = function(req, res) {
+	console.log('Muthu:'+req.body.searchtext);
+	Questions.find({"title": { "$regex": req.body.searchtext, "$options": "i" }},function (err, quests) {
+	  if (err) {
+	  	console.log('Error getting Questions');
+	  	return console.error(err);
+	  }else {
+	  	console.log(quests);
+	  	console.log(quests.length);
+	  	res.json(quests);	  	  	
+	  }
+	});
+};
+
 exports.postAnswer = function(req, res) {
 
 	// Init Variables
